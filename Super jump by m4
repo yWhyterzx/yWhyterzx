@@ -1,0 +1,13 @@
+
+local p = game.Players.LocalPlayer
+local b = Instance.new("TextButton", Instance.new("ScreenGui", p:WaitForChild("PlayerGui")))
+b.Size = UDim2.new(0,30,0,50)
+b.Position = UDim2.new(0,10,0,10)
+b.Text = "macro"
+b.MouseButton1Click:Connect(function()
+    local c = p.Character
+    if c then
+        local hrp = c:FindFirstChild("HumanoidRootPart")
+        if hrp then hrp.Velocity = Vector3.new(0, 500, 0) end
+    end
+end)
