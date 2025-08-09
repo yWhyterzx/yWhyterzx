@@ -5,7 +5,7 @@ local gui = Instance.new("ScreenGui", p:WaitForChild("PlayerGui"))
 local b = Instance.new("TextButton", gui)
 b.Size = UDim2.new(0,30,0,50)
 b.Position = UDim2.new(0,10,0,10)
-b.Text = "🥵🥵"
+b.Text = "macro jump"
 
 -- Função para aplicar o impulso para cima
 local function launchPlayer()
@@ -21,10 +21,10 @@ end
 -- Clique no botão
 b.MouseButton1Click:Connect(launchPlayer)
 
--- Pressionar a tecla L
+-- Pressionar a tecla G
 local uis = game:GetService("UserInputService")
 uis.InputBegan:Connect(function(input, gameProcessed)
-    if not gameProcessed and input.KeyCode == Enum.KeyCode.L then
+    if not gameProcessed and input.KeyCode == Enum.KeyCode.G then
         launchPlayer()
     end
 end)
